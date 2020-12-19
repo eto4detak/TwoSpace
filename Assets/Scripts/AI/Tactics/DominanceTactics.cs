@@ -27,7 +27,7 @@ public class DominanceTactics : IAITactics
         //owner.ApplyAttackSpell();
     }
 
-    public float CheckNeed()
+    public float GetPriority()
     {
         float fourth = 0.25f;
         float maxNeed = 8f;

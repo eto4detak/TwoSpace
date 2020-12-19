@@ -13,10 +13,6 @@ public class Selected : Singleton<Selected>
         characterLayer = LayerMask.GetMask("Character");
     }
 
-
-
-
-
     public void AddUnit(Unit added)
     {
         Formation form = FormationsManager.instance.FindFormation(added);

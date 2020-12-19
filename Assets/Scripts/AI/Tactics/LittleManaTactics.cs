@@ -21,7 +21,7 @@ public class LittleManaTactics : IAITactics
 
     }
 
-    public float CheckNeed()
+    public float GetPriority()
     {
         float littleMana = 30f;
         float maxNeed = 7;

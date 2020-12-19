@@ -82,7 +82,6 @@ public class Health : MonoBehaviour
             ParticleSystem soul = Instantiate(prefabSoul, transform.position, Quaternion.identity);
             soul.transform.parent = null;
             ParticleSystem.MainModule mainModule = soul.main;
-            mainModule.startColor = UnitsManager.instance.GetTeamColor(team).color;
             soul.Play();
             Destroy(soul.gameObject, mainModule.duration);
         }

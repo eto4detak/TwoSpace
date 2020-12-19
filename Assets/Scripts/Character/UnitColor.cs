@@ -18,12 +18,12 @@ public class UnitColor : MonoBehaviour
 
     private void Start()
     {
-        owner = GetComponent<Unit>();
-        Material tempM = UnitsManager.instance.GetTeamColor(owner.GetTeam());
-        ChangeMaterial(tempM);
-        currentOpacity = startOpacity;
-        unitMaterial = GetComponent<Renderer>().material;
-        unitColor = unitMaterial.color;
+        //owner = GetComponent<Unit>();
+        //Material tempM = UnitsManager.instance.GetTeamColor(owner.GetTeam());
+        //ChangeMaterial(tempM);
+        //currentOpacity = startOpacity;
+        //unitMaterial = GetComponent<Renderer>().material;
+        //unitColor = unitMaterial.color;
     }
 
     public void UpdateColor()
@@ -75,7 +75,7 @@ public class UnitColor : MonoBehaviour
     private IEnumerator Flicker()
     {
         flicker = true;
-        ChangeColor(UnitsManager.instance.flickerMaterial.color);
+        //ChangeColor(UnitsManager.instance.flickerMaterial.color);
         yield return new WaitForSeconds(1.5f);
     }
 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Unit : MonoBehaviour, IMovable, IAttack, IUnit
+public class Unit : MonoBehaviour
 {
     public float bonusColor = 50f;
     public float targetRadius = 1.5f;

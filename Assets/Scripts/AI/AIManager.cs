@@ -18,28 +18,18 @@ public class AIManager : Singleton<AIManager>
 
     private void Start()
     {
-        AddTactics();
-    }
-
-
-    public void AddTactics()
-    {
         tactics.Add(new AttackTactics());
-        tactics.Add(new EvasionTactics());
-        tactics.Add(new SpellEvasionTactics());
-        tactics.Add(new LittleManaTactics());
-        tactics.Add(new DominanceTactics());
+        //tactics.Add(new EvasionTactics());
+        //tactics.Add(new SpellEvasionTactics());
+        //tactics.Add(new LittleManaTactics());
+        //tactics.Add(new DominanceTactics());
     }
-
 
     private void FixedUpdate()
     {
         currentTactics = FindOptimalTactics();
 
-        if(currentTactics != null)
-        {
-            currentTactics.Control();
-        }
+        currentTactics.Control();
     }
 
 
@@ -50,7 +40,7 @@ public class AIManager : Singleton<AIManager>
         IAITactics result = null;
         for (int i = 0; i < tactics.Count; i++)
         {
-            currentNeed = tactics[i].CheckNeed();
+            currentNeed = tactics[i].GetPriority();
             if (currentNeed > need)
             {
                 need = currentNeed;

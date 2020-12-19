@@ -40,7 +40,7 @@ public class SpellEvasionTactics : IAITactics
         //owner.Move(evasionDirect);
     }
 
-    public float CheckNeed()
+    public float GetPriority()
     {
         //dangerSpell = null;
         need = -1;

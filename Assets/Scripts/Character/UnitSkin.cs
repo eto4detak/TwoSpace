@@ -25,7 +25,6 @@ public class UnitSkin : MonoBehaviour
     
     public void SetColor(Team team)
     {
-        ChangeColor(UnitsManager.instance.GetTeamColor(team));
         ChangeOneSkin(team);
     }
 

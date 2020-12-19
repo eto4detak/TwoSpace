@@ -6,7 +6,7 @@ public interface IAITactics
 {
 
     void Control();
-    float CheckNeed();
+    float GetPriority();
 
 
 }

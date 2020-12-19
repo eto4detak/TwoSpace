@@ -28,9 +28,5 @@ public class BackLight : MonoBehaviour
     private void SetColor()
     {
         if (owner == null || backLight == null) return;
-        for (int i = 0; i < backLight.Length; i++)
-        {
-            backLight[i].startColor = UnitsManager.instance.GetTeamColor(owner.GetTeam()).color;
-        }
     }
 }

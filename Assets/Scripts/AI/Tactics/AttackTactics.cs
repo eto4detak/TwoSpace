@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class AttackTactics : IAITactics
 {
-    public float need;
+    public Ship owner;
 
-    private Unit owner;
     public AttackTactics()
     {
     }
@@ -20,12 +19,11 @@ public class AttackTactics : IAITactics
         //if(delta < maxOffset) owner.ApplyAttackSpell();
     }
 
-    public float CheckNeed()
+    public float GetPriority()
     {
         float val = 1f;
 
-        need = val;
-        return need;
+        return val;
     }
 
 }

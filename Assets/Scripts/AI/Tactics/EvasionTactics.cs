@@ -30,7 +30,7 @@ public class EvasionTactics : IAITactics
         //owner.Move(owner.transform.position * -1);
     }
 
-    public float CheckNeed()
+    public float GetPriority()
     {
         float maxDistance = 10f;
         float evasionNeed = 5f;
